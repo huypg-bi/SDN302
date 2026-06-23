@@ -1,0 +1,17 @@
+<h2 class="mb-4">Create New Question</h2>
+
+<form action="/questions/create" method="POST">
+    <div class="mb-3">
+        <label class="form-label">Question Text:</label>
+        <input type="text" class="form-control" name="text" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Options (comma separated):</label>
+        <input type="text" class="form-control" name="options" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Correct Answer Index:</label>
+        <input type="number" class="form-control" name="correctAnswerIndex" min="0" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

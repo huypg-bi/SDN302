@@ -1,0 +1,16 @@
+<h2>{{quiz.title}}</h2>
+<p class="text-muted mb-4">{{quiz.description}}</p>
+
+<h3 class="mb-3">Questions</h3>
+
+{{#if quiz.questions.length}}
+    {{#each quiz.questions}}
+        <div class="border p-3 mb-2">
+            {{this.text}}
+        </div>
+    {{/each}}
+{{else}}
+    <p class="text-muted">No questions found.</p>
+{{/if}}
+
+<a href="/quizzes/{{quiz._id}}/edit" class="btn btn-warning mt-3">Edit Quiz</a>

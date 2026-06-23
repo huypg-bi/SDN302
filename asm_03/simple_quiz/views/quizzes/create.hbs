@@ -1,0 +1,13 @@
+<h2 class="mb-4">Create New Quiz</h2>
+
+<form action="/quizzes/create" method="POST">
+    <div class="mb-3">
+        <label class="form-label">Title:</label>
+        <input type="text" class="form-control" name="title" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Description:</label>
+        <input type="text" class="form-control" name="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

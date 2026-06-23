@@ -1,0 +1,7 @@
+<h2 class="mb-4">{{question.text}}</h2>
+
+<div class="form-control mb-4">
+    {{#each question.optionsWithCorrect}}{{this.text}}{{#if this.isCorrect}} (Correct){{/if}}{{#unless @last}}, {{/unless}}{{/each}}
+</div>
+
+<a href="/questions/{{question._id}}/edit" class="btn btn-warning">Edit Question</a>

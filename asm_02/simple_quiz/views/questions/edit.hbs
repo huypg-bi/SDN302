@@ -1,0 +1,17 @@
+<h2 class="mb-4">Edit Question</h2>
+
+<form action="/questions/{{question._id}}/edit" method="POST">
+    <div class="mb-3">
+        <label class="form-label">Question Text:</label>
+        <input type="text" class="form-control" name="text" value="{{question.text}}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Options (comma separated):</label>
+        <input type="text" class="form-control" name="options" value="{{question.optionsString}}" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Correct Answer Index:</label>
+        <input type="number" class="form-control" name="correctAnswerIndex" value="{{question.correctAnswerIndex}}" min="0" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
